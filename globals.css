@@ -1,0 +1,12 @@
+:root {
+    --primary: #0841DC;
+    --text: #ffffff;
+    --black: #000000;
+    --btnAnimationDelay: 0.45s;
+    --loader-animation-duration: 1.4s;
+    --loader-animation-delay: 0.2s;
+    --hero-text-animation-duration: 0.4s;
+    --hero-text-animation-delay: 0.5s;
+    --overlay-animation-delay: 1.8s;
+    --total-loader-duration: calc(var(--loader-animation-duration) + var(--overlay-animation-delay));
+  }

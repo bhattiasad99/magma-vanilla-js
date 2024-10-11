@@ -1,0 +1,89 @@
+@import url('globals.css');
+@import url('base.css');
+@import url('css-components/btn.css');
+@import url('utility-classes.css');
+
+nav {
+    padding: 0 6rem;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    right: 0;
+    height: max-content;
+    z-index: 2;
+}
+
+.nav__btn-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero__container {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    right: 4rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero__container h1 {
+    font-size: 85px;
+    font-weight: 320;
+    display: inline-block;
+}
+
+.hero__container--content {
+    width: 60vw;
+    min-width: 200px;
+    display: inline-flex;
+}
+
+.hero__container--word {
+    display: inline-flex;
+    overflow: hidden;
+}
+
+.hero__container--word div {
+    animation: returnLetterToNormal 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    z-index: 0;
+}
+
+.hero__subheading--text {
+    
+}
+
+@keyframes returnLetterToNormal {
+    100% {
+        transform: translateY(0px) rotateZ(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1150px) {
+    nav {
+        padding: 0 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 2rem;
+    }
+}

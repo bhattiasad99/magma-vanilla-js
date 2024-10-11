@@ -1,0 +1,31 @@
+.u-flex {
+    display: flex;
+}
+
+.u-justify-center {
+    justify-content: center;
+}
+
+.u-justify-between {
+    justify-content: space-between;
+}
+
+.u-align-center {
+    align-items: center;
+}
+
+.u-none {
+    display: none;
+}
+
+.u-w-full {
+    width: 100%;
+}
+
+.u-cover {
+    object-fit: cover;
+}
+
+.u-bg-white-imp {
+    background-color: white !important;
+}

@@ -1,0 +1,17 @@
+
+*,*::before,*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, button, input, textarea, select, a {
+    font-family: jost, 'sans-serif';
+}
+

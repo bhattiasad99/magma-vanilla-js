@@ -1,0 +1,89 @@
+.btn {
+    border: 1px solid rgba(255,255,255,0.4);
+    outline: none;
+    background-color: transparent;
+    /* var(--primary) */
+    padding: 0.6rem 1rem;
+    color: var(--text);
+    border-radius: 1.3rem;
+    cursor: pointer;
+}
+.animated {
+    overflow: hidden;
+    position: relative;
+}
+
+.animated span {
+    transition: all var(--btnAnimationDelay) ease-in-out, opacity var(--btnAnimationDelay) ease-in-out;
+    color: var(--text);
+    display: inline-block;
+    position: relative;
+    transform: translateY(0); /* Initial state */
+    opacity: 1; /* Initial state */
+}
+
+.btn-white {
+    background-color: var(--text);
+    color: var(--primary);
+}
+
+.btn-white.animated span {
+    color: var(--primary);
+}
+
+.animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: var(--black); */
+    z-index: 2;
+    transition: all var(--btnAnimationDelay) ease-in-out;
+    transform: translateY(100%);
+}
+
+.btn-medium.animated::before {
+    background-color: var(--text);
+}
+
+.btn-large.animated::after {
+    background-color: var(--white);
+}
+
+.animated::after {
+    content: 'LEARN MORE';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-200%);
+    transition: all var(--btnAnimationDelay) ease-in-out;
+    /* color: var(--white); */
+    z-index: 3;
+}
+
+.btn-medium.animated::after {
+    color: var(--primary);
+}
+.btn-large.animated::after {
+    color: var(--white);
+}
+
+.animated:hover::after {
+    top: 50%;
+    transform: translateY(-50%); 
+    
+}
+
+.animated:hover::before {
+    transform: translateY(0%);
+}
+
+/* Moves the text downward when hovering */
+.animated:hover span {
+    transform: translateY(200%);
+    opacity: 0;
+}
